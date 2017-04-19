@@ -127,7 +127,7 @@
     <div class="row">
         <div class="panel panel-primary filterable">
             <div class="panel-heading">
-                <h3 class="panel-title">Users</h3>
+                <h3 class="panel-title">Game Scores</h3>
 
             </div>
             <table class="table">
@@ -141,14 +141,34 @@
                     </tr>
                 </thead>
                 <tbody>
+                    
+
+                    @foreach (var item in Model.GameRecords)
+                    {
+                        var homeQuery = Model.ListOfTeams.Where(w => w.Id == item.HomeTeamId).Select(s => s.Name);
+                        var awayQuery = Model.ListOfTeams.Where(w => w.Id == item.AwayTeamId).Select(s => s.Name);
+                        var queryTwo = "";
+                        var queryThree = "";
+
+                        foreach (var x in homeQuery)
+                        {
+                            queryTwo += x;
+                        }
+
+                        foreach (var y in awayQuery)
+                        {
+                            queryThree += y;
+                        }
+
                     <tr class="success">
-                        <td><strong>1</strong></td>
-                        <td>Tampa Dart Dynamos</td>
-                        <td>Buffallo BullsEyes</td>
-                        <td>20-17</td>
+                        <td><strong>@item.Id</strong></td>
+                        <td>@queryTwo</td>
+                        <td>@queryThree</td>
+                        <td>@item.Score</td>
                     </tr>
+                    }
                         
-                    <tr>
+                    @*<tr>
                         <td><strong>2</strong></td>
                         <td>St Pete Ping Ping Powerhouse</td>
                         <td>Philly Paddlers</td>
@@ -161,7 +181,7 @@
                         <td>Portland Putters</td>
                         <td>2-1</td>
                         
-                    </tr>
+                    </tr>*@
                 </tbody>
             </table>
         </div>

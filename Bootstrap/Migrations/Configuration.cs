@@ -53,7 +53,7 @@ namespace Bootstrap.Migrations
             };
 
             games.ForEach(s => db.Games.AddOrUpdate(o => o.Score, s));
-            db.SaveChanges();
+            //db.SaveChanges();
 
 
         }

@@ -11,11 +11,10 @@ namespace Bootstrap.Services
     {
        public LeagueContext db = new LeagueContext();
 
-       public List<Sports> GetAllSports()
+        public List<Sports> GetAllSports()
         {
             var sports = db.Sports.ToList();
             return sports;
         }
-
     }
 }

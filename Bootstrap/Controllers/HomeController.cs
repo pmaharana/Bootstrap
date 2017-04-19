@@ -6,33 +6,51 @@ using System.Web.Mvc;
 using Bootstrap.ViewModel;
 using Bootstrap.Models;
 using Bootstrap.Services;
+using Bootstrap.DataContext;
 
 namespace Bootstrap.Controllers
 {
     public class HomeController : Controller
     {
+        public LeagueContext db = new LeagueContext();
+
+        public SportServices sportServices = new SportServices();
+        public TeamServices teamServices = new TeamServices();
+        public GameServices gameServices = new GameServices();
+
         
 
         public ActionResult Index()
         {
-            var vm = new MainPage
-            {
-                ListOfTeams = new List<Teams>
-                {
-                    new Teams {Name = "a"},
+            var sports = sportServices.GetAllSports();
+            var teams = teamServices.GetAllTeams();
+            var games = gameServices.GetAllGames();
 
-                    new Teams {Name = "a"},
-
-                    new Teams {Name = "a"},
-
-                    new Teams {Name = "a"},
-                }
-            };
-
-            var name = vm.ListOfTeams.Count;
+            var vm = new MainPage(sports, teams, games);
 
             return View(vm);
         }
+
+        //public ActionResult Index()
+        //{
+        //    var vm = new MainPage
+        //    {
+        //        ListOfTeams = new List<Teams>
+        //        {
+        //            new Teams {Name = "a"},
+
+        //            new Teams {Name = "a"},
+
+        //            new Teams {Name = "a"},
+
+        //            new Teams {Name = "a"},
+        //        }
+        //    };
+
+        //    var name = vm.ListOfTeams.Count;
+
+        //    return View(vm);
+        //}
 
         public ActionResult About()
         {
