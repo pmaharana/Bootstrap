@@ -65,3 +65,10 @@ C:\Users\prana\tiy\week-6\day-2\Bootstrap\Bootstrap\bin\Microsoft.AI.Web.xml
 C:\Users\prana\tiy\week-6\day-2\Bootstrap\Bootstrap\obj\Debug\Bootstrap.csprojResolveAssemblyReference.cache
 C:\Users\prana\tiy\week-6\day-2\Bootstrap\Bootstrap\obj\Debug\Bootstrap.dll
 C:\Users\prana\tiy\week-6\day-2\Bootstrap\Bootstrap\obj\Debug\Bootstrap.pdb
+C:\Users\prana\tiy\week-6\day-2\Bootstrap\Bootstrap\bin\EntityFramework.dll
+C:\Users\prana\tiy\week-6\day-2\Bootstrap\Bootstrap\bin\EntityFramework.SqlServer.dll
+C:\Users\prana\tiy\week-6\day-2\Bootstrap\Bootstrap\bin\EntityFramework.xml
+C:\Users\prana\tiy\week-6\day-2\Bootstrap\Bootstrap\bin\EntityFramework.SqlServer.xml
+C:\Users\prana\tiy\week-6\day-2\Bootstrap\Bootstrap\obj\Debug\Bootstrap.Migrations.AddedTables.resources
+C:\Users\prana\tiy\week-6\day-2\Bootstrap\Bootstrap\obj\Debug\Bootstrap.csproj.GenerateResource.Cache
+C:\Users\prana\tiy\week-6\day-2\Bootstrap\Bootstrap\obj\Debug\Bootstrap.Migrations.UpdatedGameTable.resources

@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Bootstrap.ViewModel.MainPage
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -82,52 +84,24 @@
     
     <ul class="list-group">
         <li class="list-group-item active"><strong>Teams</strong> <span class="badge">317 teams</span></li>
+       
+        @foreach (var team in Model.ListOfTeams)
+        {
         <li class="list-group-item">
             <div class="row">
                 <div class="col-md-1"> 
                     <img src="/Images/dartboard.png" alt="Darts" class="img-thumbnail img-responsive">
                 </div>
                 <div class="col-md-10">
-                    <strong>Tampa Dart Dyanamos</strong> 
+                    <strong>@team.Name</strong> 
                     <p>Bacon ipsum dolor amet tri-tip shankle chuck doner frankfurter tail fatback burgdoggen </p>
                 </div>
                 <div class="col-md-1">
                     <span class="badge">8 players</span>
                 </div>
                 </div>
-          
         </li>
-        <li class="list-group-item">
-            <div class="row">
-                <div class="col-md-1">
-                    <img src="/Images/pingpong.jpg" alt="Ping-pong" class="img-thumbnail">
-                </div>
-                <div class="col-md-10">
-                    <strong>St. Pete Ping Pong Powerhouse</strong>
-                    <p>Bacon ipsum dolor amet tri-tip shankle chuck doner frankfurter tail fatback burgdoggen </p>
-                </div>
-                <div class="col-md-1">
-                    <span class="badge">6 players</span>
-                </div>
-            </div>
-        </li>
-        
-        
-        <li class="list-group-item">
-            <div class="row">
-                <div class="col-md-1">
-                    <img src="/Images/golf.jpg" alt="Golf" class="img-thumbnail">
-                </div>
-                <div class="col-md-10">
-                    <strong>Orlando Golf Gang</strong>
-                    <p>Bacon ipsum dolor amet tri-tip shankle chuck doner frankfurter tail fatback burgdoggen </p>
-                </div>
-                <div class="col-md-1">
-                    <span class="badge">6 players</span>
-                </div>
-            </div>
-        </li>
-        
+        }
         <li class="list-group-item disabled">
             <div class=" text-center">
                 <ul class="pagination">

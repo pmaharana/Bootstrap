@@ -9,6 +9,11 @@ namespace Bootstrap.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        
+        public int NumberOfPlayers { get; set; }
+
+        public int? SportId { get; set; }
+        public Sports Sport { get; set; }
+
+
     }
 }

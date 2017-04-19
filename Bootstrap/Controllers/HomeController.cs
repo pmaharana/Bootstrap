@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Bootstrap.ViewModel;
+using Bootstrap.Models;
 
 namespace Bootstrap.Controllers
 {
@@ -10,7 +12,20 @@ namespace Bootstrap.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var vm = new MainPage
+            {
+                ListOfTeams = new List<Teams>
+                {
+                    new Teams {Name = "a"},
+
+                    new Teams {Name = "a"},
+
+                    new Teams {Name = "a"},
+
+                    new Teams {Name = "a"},
+                }
+            };
+            return View(vm);
         }
 
         public ActionResult About()

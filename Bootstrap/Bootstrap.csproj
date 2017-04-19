@@ -152,10 +152,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704191828001_AddedTables.cs" />
+    <Compile Include="Migrations\201704191828001_AddedTables.Designer.cs">
+      <DependentUpon>201704191828001_AddedTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704191928409_UpdatedGameTable.cs" />
+    <Compile Include="Migrations\201704191928409_UpdatedGameTable.Designer.cs">
+      <DependentUpon>201704191928409_UpdatedGameTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Games.cs" />
     <Compile Include="Models\Sports.cs" />
     <Compile Include="Models\Teams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\MainPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -224,6 +234,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704191828001_AddedTables.resx">
+      <DependentUpon>201704191828001_AddedTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704191928409_UpdatedGameTable.resx">
+      <DependentUpon>201704191928409_UpdatedGameTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
