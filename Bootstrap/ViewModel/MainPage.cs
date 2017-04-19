@@ -12,5 +12,9 @@ namespace Bootstrap.ViewModel
         public List<Teams> ListOfTeams { get; set; }
         public List<Games> GameRecords { get; set; }
 
+        public Teams IndividualTeam {get; set;}
+        MainPage example = new MainPage();
+        
+
     }
 }

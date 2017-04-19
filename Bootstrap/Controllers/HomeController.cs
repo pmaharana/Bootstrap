@@ -5,11 +5,14 @@ using System.Web;
 using System.Web.Mvc;
 using Bootstrap.ViewModel;
 using Bootstrap.Models;
+using Bootstrap.Services;
 
 namespace Bootstrap.Controllers
 {
     public class HomeController : Controller
     {
+        
+
         public ActionResult Index()
         {
             var vm = new MainPage
@@ -25,6 +28,9 @@ namespace Bootstrap.Controllers
                     new Teams {Name = "a"},
                 }
             };
+
+            var name = vm.ListOfTeams.Count;
+
             return View(vm);
         }
 
